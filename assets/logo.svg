@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-label="The Gate Events">
+  <defs><style>.t{font-family:Cinzel,"Trajan Pro",Georgia,"Times New Roman",serif;fill:#7a3e44;font-weight:600}</style></defs>
+  <circle cx="200" cy="200" r="200" fill="#efdfd9"/>
+  <g fill="none" stroke="#7a3e44" stroke-width="3.4" stroke-linecap="round">
+    <path d="M131 222V142a69 69 0 0 1 138 0v80"/>
+    <path d="M141 222V142a59 59 0 0 1 118 0v80"/>
+    <path d="M152 222V146a48 48 0 0 1 96 0v76"/>
+    <path d="M200 54v158"/>
+  </g>
+  <text class="t" x="200" y="272" text-anchor="middle" font-size="41" letter-spacing="5.5">THE GATE</text>
+  <text class="t" x="204" y="304" text-anchor="middle" font-size="11" letter-spacing="10" font-weight="500">EVENTS</text>
+</svg>
