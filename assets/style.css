@@ -13,7 +13,7 @@
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; background: #fffaf7; }
 
 body {
   margin: 0;
@@ -250,4 +250,46 @@ footer { border-top: 1px solid var(--line); padding: 32px 0 44px; color: var(--m
   .package.featured { margin-top: 10px; }
   .nav-links { gap: 14px; }
   .nav-links a { font-size: .82rem; }
+}
+
+/* ---- polish (2026-10): perfect circles, calmer phone layout ----------------------------------------- */
+/* The rings around the logo are always circles (sized from the card's smaller side), and both stay visible */
+.monogram-card { container-type: size; }
+.monogram-card::before { width: auto; height: auto; inline-size: min(84cqi, 84cqh); aspect-ratio: 1; }
+.monogram-card::after { width: auto; height: auto; inline-size: min(68cqi, 68cqh); aspect-ratio: 1; }
+@supports not (container-type: size) { .monogram-card::before { inline-size: 80%; } .monogram-card::after { inline-size: 64%; } }
+
+@media (max-width: 780px) {
+  .hero { padding: 28px 0 44px; gap: 34px; min-height: 0; }
+  .hero p { font-size: 1.05rem; margin: 18px 0 24px; }
+  .monogram-card { aspect-ratio: 1; width: min(100%, 320px); justify-self: center; border-radius: 160px 160px 22px 22px; }
+  .monogram-card img { width: 46%; }
+  .section { padding: 54px 0; }
+  .section-heading { gap: 12px; margin-bottom: 26px; }
+  .section-heading h2 { font-size: 2.1rem; }
+
+  .services { gap: 12px; }
+  .service { padding: 22px 22px 20px; }
+  .service span { font-size: 1.3rem; margin-bottom: 8px; }
+  .service h3 { margin-top: 0; }
+
+  .steps { gap: 10px; }
+  .steps li { padding: 18px 18px 18px 70px; border-radius: 18px; }
+  .steps .step-n { position: absolute; left: 16px; top: 18px; width: 38px; height: 38px; }
+  .steps h3 { margin: 2px 0 4px; font-size: 1.15rem; }
+  .steps p { font-size: .93rem; }
+
+  .packages { gap: 22px; }
+  .package { padding: 28px 22px 24px; }
+  .package-name { font-size: 1.6rem; }
+
+  .features { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .feature { padding: 16px 14px; border-radius: 16px; }
+  .feature h3 { font-size: 1rem; }
+  .feature p { font-size: .84rem; line-height: 1.45; }
+
+  .privacy-points strong { font-size: 1.02rem; }
+  .faq summary { font-size: 1.05rem; padding: 18px 36px 18px 0; }
+  .contact-band { padding: 34px 24px; }
+  .contact-actions .button { text-align: center; justify-content: center; }
 }
